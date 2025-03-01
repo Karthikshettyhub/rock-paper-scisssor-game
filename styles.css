@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: #0a0a23;
+  --white: #ffffff;
+  --yellow: #f1be32;
+  --golden-yellow: #feac32;
+  --light-yellow: #ffdb70;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin: 15px 0 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  width: 120px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--very-dark-blue);
+  background: linear-gradient(to bottom, var(--light-yellow), var(--golden-yellow));
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, var(--yellow), var(--golden-yellow));
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Rules Container */
+.rules-container {
+  max-width: 90%;
+  padding: 15px 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 4px solid var(--yellow);
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+  box-shadow: 0 5px 10px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.rules-container:hover {
+  transform: translateY(-5px);
+}
+
+.rules-container ul {
+  list-style-type: none;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.rules-container p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (min-width: 760px) {
+  .rules-container {
+    width: 50%;
+  }
+}
+
+/* Scoreboard */
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.score {
+  font-size: 1.5rem;
+}
+
+/* Results */
+.results-container {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+#winner-msg {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Reset Button */
+#reset-game-btn {
+  display: none;
+  width: 150px;
+  margin: 20px auto;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
